@@ -1,0 +1,71 @@
+.:
+total 8
+drw-rw-rw-. 2 spartak spartak 4096 Sep 18 19:45 dir
+----r-----. 1 root    spartak    5 Sep 18 19:43 file
+-rw-------. 1 spartak spartak    0 Sep 18 19:53 file1
+-rw-rw-rw-. 1 spartak spartak    0 Sep 18 19:54 file2
+-rw-rw-r--. 1 spartak spartak    0 Sep 18 19:58 f.txt
+
+./dir:
+total 0
+-????????? ? ? ? ?            ? new_file
+    
+   52  mkdir test
+   53  cd test/
+   54  touch file
+   55  chmod file 000
+   56  chmod 000 file
+   57  echo "bla" >> file 
+   58  echo "тест" >> file 
+   59  cat file 
+   60  chmod 400 file
+   61  ll
+   62  chmod 200 file
+   63  ll
+   64  echo "test" >> file
+   65  cat file 
+   66  chmod 240 file
+   67  ll
+   68  cat file
+   69  chmod 640 file
+   70  ls -l
+   71  cat file
+   72  mkdir dir
+   73  touch new_file
+   74  ls
+   75  rm new_file 
+   76  touch dir/new_file
+   77  echo "file 2" >> dir/new_file 
+   78  ls dir
+   79  chmod 666 dir
+   80  ll
+   81  cat dir/new_file 
+   82  rm dir/new_file 
+   83  man chown
+   84  cd dir/
+   85  pwd
+   86  chown root file
+   87  chgrp root fil
+   88  chgrp root file
+   89  man umask 
+   90  umask --help
+   91  umask
+   92  umask 077
+   93  touch file1
+   94  ll
+   95  umask 000
+   96  touch file2
+   97  ll
+   98  su
+   99  cd test/
+  100  cat file
+  101  su
+  102  cat file
+  103  ll
+  104  su
+  105  ll
+  106  cat file
+  107  ls -lR >> f.txt
+  108  ls -lR
+  109  cat f.txt 
+  110  history >> f.txt 
